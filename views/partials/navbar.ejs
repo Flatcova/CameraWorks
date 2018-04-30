@@ -1,14 +1,31 @@
 <header>
   <nav>
     <div class="nav-wrapper grey">
-      <a href="#" class="brand-logo">
+      <a href="/" class="brand-logo">
         <img src="/images/Logo.png" alt="" style="height: 56px;">
       </a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">Generar Recibo</a></li>
+        <li><a href="/generar-recibo">Generar Recibo</a></li>
         <li><a href="#">Generar Factura</a></li>
         <li><a href="#">Consultar Facturas</a></li>
       </ul>
     </div>
   </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="/generar-recibo">Generar Recibo</a></li>
+    <li><a href="#">Generar Factura</a></li>
+    <li><a href="#">Consultar Facturas</a></li>
+    <div class="center" style="padding-top: 100%;">
+      <a href="/" class="brand-logo">
+        <img src="/images/Logo.png" alt="" style="height: 56px;">
+      </a>
+    </div>
+    <div class="container center">
+      © 2018 Copyright Camera Works
+    </div>
+  </ul>
 </header>

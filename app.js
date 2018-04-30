@@ -5,8 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var adminRouter = require('./routes/admin/main');
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require('./routes/main/index');
+var genReciboRouter = require('./routes/main/gen-recibo');
 
 
 var engine = require('ejs-mate');
@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/generar-recibo', genReciboRouter);
 app.use('/admin', adminRouter);
 
 // catch 404 and forward to error handler
