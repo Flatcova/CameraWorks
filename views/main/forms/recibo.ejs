@@ -2,59 +2,81 @@
 
 <div class="row">
   <div class="col s12 m12">
-    <div class="card horizontal grey darken-1">
-      <div class="card-content white-text" style="width:100%;">
-         <span class="card-title center">Generar recibo</span>
-         <div class="card horizontal grey lighten-3">
-           <div class="card-content white-text" style="width:100%;">
-             <div class="row">
-              <form class="col s12" style="padding-bottom:10px">
-                <div class="row">
-                  <div class="input-field col s6 right">
-                    <input type="text" class="datepicker">
-                  </div>
-                  <div class="input-field col s6">
-                    <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                    <label for="first_name">First Name</label>
-                  </div>
-                  <div class="input-field col s6">
-                    <input id="last_name" type="text" class="validate">
-                    <label for="last_name">Last Name</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                    <label for="disabled">Disabled</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
-                    <label for="password">Password</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="email" type="email" class="validate">
-                    <label for="email">Email</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col s12">
-                    This is an inline input field:
-                    <div class="input-field inline">
-                      <input id="email_inline" type="email" class="validate">
-                      <label for="email_inline">Email</label>
-                      <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-           </div>
-         </div>
-      </div>
-    </div>
+    <header>
+			<h1>Recibo</h1>
+			<address>
+        <p>RFC: MOGD-950731-NP4</p>
+				<p>Alfa No. 372, Local A, Col. Contry<br>Monterrey, Nuevo León. CP. 64860</p>
+				<p>Tel. 11 33 65 62 y 83 57 67 94</p>
+        <p>WhatsApp: 8116402723</p>
+			</address>
+			<span><img alt="" style="width:440px;"src="./images/Logo.png"></span>
+		</header>
+		<article>
+			<h6>Recipient</h6>
+			<address contenteditable>
+				<p>Nombre:
+          <br>
+          E-mail:
+          <br>
+          Telefono:
+        </p>
+			</address>
+			<table class="meta">
+				<tr>
+					<th><span>Folio No.</span></th>
+					<td><span>101138</span></td>
+				</tr>
+				<tr>
+					<th><span>Fecha</span></th>
+					<td><span contenteditable>1 de Mayo, 2018</span></td>
+				</tr>
+				<tr>
+					<th><span>Total A Pagar</span></th>
+					<td><span id="prefix" contenteditable>$</span><span>0.00</span></td>
+				</tr>
+			</table>
+			<table class="inventory">
+				<thead>
+					<tr>
+						<th><span>Articulo</span></th>
+						<th><span>Descripción</span></th>
+						<th><span>Precio Unitario</span></th>
+						<th><span>Cantidad</span></th>
+						<th><span>Precio Final</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a class="cut">-</a><span contenteditable>Camara NIKON</span></td>
+						<td><span contenteditable>Paquete Inicial</span></td>
+						<td><span data-prefix>$</span><span contenteditable>450.00</span></td>
+						<td><span contenteditable>1</span></td>
+						<td><span data-prefix>$</span><span>0.00</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<a class="add">+</a>
+			<table class="balance">
+				<tr>
+					<th><span contenteditable>Total</span></th>
+					<td><span data-prefix>$</span><span>0.00</span></td>
+				</tr>
+				<tr>
+					<th><span contenteditable>Anticipo</span></th>
+					<td><span data-prefix>$</span><span contenteditable>0.00</span></td>
+				</tr>
+				<tr>
+					<th><span contenteditable>Total a deber</span></th>
+					<td><span data-prefix>$</span><span>0.00</span></td>
+				</tr>
+			</table>
+		</article>
+		<aside>
+			<h1><span>Notas Adicionales</span></h1>
+			<div contenteditable>
+				<p style="text-align: center;"> "Notas extra del servicio (Editable)" </p>
+			</div>
+		</aside>
   </div>
 </div>
