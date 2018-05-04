@@ -7,6 +7,7 @@ var logger = require('morgan');
 var adminRouter = require('./routes/admin/main');
 var indexRouter = require('./routes/main/index');
 var genReciboRouter = require('./routes/main/gen-recibo');
+var genMantenimientoRouter = require('./routes/main/gen-mantenimiento');
 
 
 var engine = require('ejs-mate');
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/generar-recibo', genReciboRouter);
+app.use('/generar-mantenimiento', genMantenimientoRouter);
 app.use('/admin', adminRouter);
 
 // catch 404 and forward to error handler
