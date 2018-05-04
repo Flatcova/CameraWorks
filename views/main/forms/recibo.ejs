@@ -22,7 +22,7 @@
 			<table class="meta">
 				<tr>
 					<th><span>Folio No.</span></th>
-					<td><span>101138</span></td>
+					<td><span contenteditable>101138</span></td>
 				</tr>
 				<tr>
 					<th><span>Fecha</span></th>
@@ -30,7 +30,7 @@
 				</tr>
 				<tr>
 					<th><span>Total A Pagar</span></th>
-					<td><span id="prefix" contenteditable>$</span><span>0.00</span></td>
+					<td><span id="prefix">$</span><span>0.00</span></td>
 				</tr>
 			</table>
 			<table class="inventory">
@@ -60,7 +60,7 @@
 					<td><span data-prefix>$</span><span>0.00</span></td>
 				</tr>
 				<tr>
-					<th><span contenteditable>Anticipo</span></th>
+					<th><span contenteditable>Anticipo / Descuento </span></th>
 					<td><span data-prefix>$</span><span contenteditable>0.00</span></td>
 				</tr>
 				<tr>
@@ -72,12 +72,11 @@
 		<aside>
 			<h1><span>Notas Adicionales</span></h1>
       <div class="input-field">
-        <textarea id="textarea1" class="materialize-textarea"></textarea>
-        <label for="textarea1">Notas extra del servicio (Editable)</label>
+        <textarea id="textarea1" class="materialize-textarea" placeholder="Notas extra del servicio (Editable)"></textarea>
       </div>
 		</aside>
-    <div class="print-button" style="text-align: center;">
-      <button class="btn waves-effect waves-light" style="background-color:#000" type="text" name="action">Imprimir
+    <div style="text-align: center;">
+      <button class="btn waves-effect waves-light print-button" style="background-color:#000" type="text" name="action">Imprimir
         <i class="material-icons right">print</i>
       </button>
     </div>
