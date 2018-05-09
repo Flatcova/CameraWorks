@@ -1,1 +1,78 @@
 <% layout('layout') -%>
+
+<div class="row">
+    <div class="col s12 m12">
+        <header>
+            <h1>Formato mantenimiento</h1>
+            <address>
+                <p>RFC: MOGD-950731-NP4</p>
+                <p>Alfa No. 372, Local A, Col. Contry<br>Monterrey, Nuevo León. CP. 64860</p>
+                <p>Tel. 11 33 65 62 y 83 57 67 94</p>
+                <p>WhatsApp: 8116402723</p>
+            </address>
+            <span><img src="./images/Logo.png" alt="" style="width: 300px;"></span>
+        </header>
+
+        <article>
+            <h3>Cliente</h3>
+            <address>
+                <p>Nombre: <span style="text-decoration: underline;" contenteditable></span></p>
+                <p>E-mail: <span style="text-decoration: underline;" contenteditable></span></p>
+                <p>Telefono: <span style="text-decoration: underline;" contenteditable=""></span></p>
+            </address>
+
+            <table class="meta">
+                <tr>
+                    <th><span>Folio No.</span></th>
+                    <td><span contenteditable>101138</span></td>
+                </tr>
+                <tr>
+                    <th><span>Fecha</span></th>
+                    <td><input type="text" class="datepicker" style="height: auto; border-bottom: none;"></td>
+                </tr>
+                <tr>
+                    <th><span>Empleado</span></th>
+                    <td><input type="text" style="height: auto; border-bottom: none"></td>
+                </tr>
+            </table>
+
+            <table class="inventory">
+                <thead>
+                    <tr>
+                        <th><span>Modelo</span></th>
+                        <th><span>Serie</span></th>
+                        <th><span>Accesorios y/o complementos</span></th>
+                        <th><span>Falla reportada</span></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><a class="cut">-<span contenteditable=""></span></a></td>
+                        <td><span contenteditable=""></span></td>
+                        <td><span contenteditable=""></span></td>
+                        <td><span contenteditable=""></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="add">+</a>
+
+            <table class="balance">
+                <tr>
+                    <th><span contenteditable>Total</span></th>
+                    <td><span data-prefix>$</span><span>0.00</span></td>
+                </tr>
+
+                <tr>
+                    <th><span contenteditable>Anticipo / Descuento</span></th>
+                    <td><span data-prefix>$</span><span contenteditable="">0.00</span></td>
+                </tr>
+
+                <tr>
+                    <th><span contenteditable>Total a deber</span></th>
+                    <td><span data-prefix>$</span><span>0.00</span></td>
+                </tr>
+            </table>
+        </article>
+    </div>
+</div>
