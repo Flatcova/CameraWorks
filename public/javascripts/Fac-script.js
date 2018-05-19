@@ -193,18 +193,18 @@ function onContentLoad() {
 		image.classList.remove('hover');
 	}
 
-	function onFileInput(e) {
-		image.classList.remove('hover');
-
-		var
-		reader = new FileReader(),
-		files = e.dataTransfer ? e.dataTransfer.files : e.target.files,
-		i = 0;
-
-		reader.onload = onFileLoad;
-
-		while (files[i]) reader.readAsDataURL(files[i++]);
-	}
+	// function onFileInput(e) {
+	// 	image.classList.remove('hover');
+	//
+	// 	var
+	// 	reader = new FileReader(),
+	// 	files = e.dataTransfer ? e.dataTransfer.files : e.target.files,
+	// 	i = 0;
+	//
+	// 	reader.onload = onFileLoad;
+	//
+	// 	while (files[i]) reader.readAsDataURL(files[i++]);
+	// }
 
 	function onFileLoad(e) {
 		var data = e.target.result;
@@ -230,8 +230,8 @@ function onContentLoad() {
 		input.addEventListener('dragleave', onLeaveCancel);
 		input.addEventListener('mouseout', onLeaveCancel);
 
-		input.addEventListener('drop', onFileInput);
-		input.addEventListener('change', onFileInput);
+		// input.addEventListener('drop', onFileInput);
+		// input.addEventListener('change', onFileInput);
 	}
 }
 

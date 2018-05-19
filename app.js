@@ -3,16 +3,24 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose');
 
 var adminRouter = require('./routes/admin/main');
 var indexRouter = require('./routes/main/index');
 var genReciboRouter = require('./routes/main/gen-recibo');
 var genMantenimientoRouter = require('./routes/main/gen-mantenimiento');
 
+var configDB = require('./config/database.js')
 
 var engine = require('ejs-mate');
 
 var app = express();
+
+mongoose.connect(configDB.url, (err) => {
+  if(!err)
+    console.log('Se conecto la base de datos exitosamente');
+})
+
 
 app.engine('ejs', engine);
 // view engine setup

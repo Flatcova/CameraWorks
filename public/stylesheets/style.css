@@ -7,7 +7,14 @@ body {
 main {
   flex: 1 0 auto;
 }
-/* 
+
+.inputs {
+  border-bottom: none;
+height: unset;
+margin: unset;
+width: unset;
+}
+/*
 .header-main {
   margin: 0;
 } */
