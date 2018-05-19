@@ -4,33 +4,33 @@
 (function (document) {
 
 
-	 //let span = document.querySelector("table.meta>tr>td>span")
+   //let span = document.querySelector("table.meta>tr>td>span")
 
-	 //creas variable span y vas al documento de la pagina y buscas el table clase meta con todos los tr y el primer hijo
-	 //y luego busca el td con el hijo span
-	 let span = document.querySelector("table.meta tr:first-child td>span")
-	 //creas variable folio
-	   var folio;
-	   //
-	 if (localStorage.getItem("Mantenimiento"))
-	 {
-	     folio = localStorage.Mantenimiento
-	     folio ++
-	     span.innerHTML = folio
-	 }
-	 else
-	 {
-	     localStorage.setItem("Mantenimiento", "1")
-	     folio = 1
-	     span.innerHTML = folio
-	 }
+   //creas variable span y vas al documento de la pagina y buscas el table clase meta con todos los tr y el primer hijo
+   //y luego busca el td con el hijo span
+   let place = document.querySelector("table.meta tr:first-child td>span")
+   //creas variable folio
+     var folio1;
+     //
+   if (localStorage.getItem("Recibo"))
+   {
+       folio1 = localStorage.Recibo
+       folio1 ++
+       place.innerHTML = folio1
+   }
+   else
+   {
+       localStorage.setItem("Recibo", "1")
+       folio1 = 1
+       place.innerHTML = folio1
+   }
 
-	 //var button = document.getElementById("folio")
-	 var button = document.querySelector("#btnRecb")
+   //var button = document.getElementById("folio")
+   var button = document.querySelector("#btnMant")
 
-	 button.addEventListener("click", function(){
-	   localStorage.setItem("Mantenimiento", folio)
-	 });
+   button.addEventListener("click", function(){
+     localStorage.setItem("Recibo", folio1)
+   });
 
 	var
 	head = document.head = document.getElementsByTagName('head')[0] || document.documentElement,
@@ -100,9 +100,9 @@ function generateTableRow() {
 
 	emptyColumn.innerHTML = '<td><a class="cut">-</a><span contenteditable></span></td>' +
 		'<td><span contenteditable></span></td>' +
-		'<td><span data-prefix>$</span><span contenteditable>0.00</span></td>' +
-		'<td><span contenteditable>0</span></td>' +
-		'<td><span data-prefix>$</span><span>0.00</span></td>';
+		'<td><span contenteditable></span></td>' +
+		'<td><span contenteditable></span></td>' +
+		'<td><span data-prefix>$</span><span contenteditable></span></td>';
 
 	return emptyColumn;
 }
@@ -151,7 +151,7 @@ function updateInvoice() {
 		cells = a[i].querySelectorAll('span:last-child');
 
 		// set price as cell[2] * cell[3]
-		price = parseFloatHTML(cells[2]) * parseFloatHTML(cells[3]);
+		price = parseFloatHTML(cells[4]);
 
 		// add price to total
 		total += price;

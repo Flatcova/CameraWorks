@@ -28,7 +28,7 @@
           </tr>
           <tr>
             <th><span>Fecha</span></th>
-            <td><input type="text" name="fecha" id="fecha" class="datepicker" style="height: auto; border-bottom:none;"></input></td>
+            <td><input type="text" name="fecha" id="fecha" class="datepicker" style="margin: unset; height: auto; border-bottom:none;"></input></td>
           </tr>
           <tr>
             <th><span>Total A Pagar</span></th>
@@ -79,12 +79,13 @@
           <textarea id="textarea1" class="materialize-textarea" placeholder="Notas extra del servicio (Editable)"></textarea>
         </div>
       </aside>
-        <div style="text-align: center;">
-          <button class="btn waves-effect waves-light print-button" style="background-color:#000" type="submit">Imprimir
-            <i class="material-icons right">print</i>
-          </button>
-        </div>
-      </aside>
+      <div style="text-align: center;">
+        <button class="btn waves-effect waves-light print-button" style="background-color:#000" type="submit" id="btnRecb" name="btnRecb">Imprimir
+          <i class="material-icons right">print</i>
+        </button>
+      </div>
     </form>
   </div>
 </div>
+
+<script src="./javascripts/Fac-script.js" type="text/javascript"></script>

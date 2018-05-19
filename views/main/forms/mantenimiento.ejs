@@ -16,9 +16,9 @@
         <article>
             <h3>Cliente</h3>
             <address>
-                <p>Nombre: <span style="text-decoration: underline;" contenteditable></span></p>
-                <p>E-mail: <span style="text-decoration: underline;" contenteditable></span></p>
-                <p>Telefono: <span style="text-decoration: underline;" contenteditable=""></span></p>
+              <p>Nombre: <input type="text" name="nombreCliente" id="nombreCliente" style="height: unset; margin: unset; width: unset;" contenteditable></input></p>
+              <p>E-mail: <input type="text" name="emailCliente" id="emailCliente" style="height: unset; margin: unset; width: unset;"></input></p>
+              <p>Telefono: <input type="tel" name="telefonoCliente" id="telefonoCliente" style="height: unset; margin: unset; width: unset;" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" minlength="8" maxlength="10"></input></span></p>
             </address>
 
             <table class="meta">
@@ -28,15 +28,15 @@
                 </tr>
                 <tr>
                     <th><span>Fecha</span></th>
-                    <td><input type="text" class="datepicker" style="height: auto; border-bottom: none;"></td>
+                    <td><input type="text" class="datepicker" style="margin: unset; height: auto; border-bottom: none;"></td>
                 </tr>
                 <tr>
                     <th><span>Empleado</span></th>
-                    <td><input type="text" style="height: auto; border-bottom: none"></td>
+                    <td><input type="text" style="border-bottom:none; height: unset; margin: unset; width: unset;"></input></td>
                 </tr>
                 <tr>
                     <th><span>Total a pagar</span></th>
-                    <td><span id="prefix">$</span>0.00</td>
+                    <td><span id="prefix">$</span><span>0.00</span></td>
                 </tr>
             </table>
 
@@ -47,17 +47,17 @@
                         <th><span>Serie</span></th>
                         <th><span>Accesorios y/o complementos</span></th>
                         <th><span>Falla reportada</span></th>
+                        <th><span>Costo</span></th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr>
-                        <td><a class="cut">-</a><span contenteditable>Camara</span></td>
-                        <td><span contenteditable>Mantenimiento inicial</span></td>
-
-                        <td><span data-prefix>$</span><span contenteditable>450.00</span></td>
-                        <td><span contenteditable>1</span></td>
-                        <td><span data-prefix>$</span>0.00</td>
+                      <td><a class="cut">-</a><span contenteditable></span></td>
+                      <td><span contenteditable></span></td>
+                      <td><span contenteditable></span></td>
+                      <td><span contenteditable></span></td>
+                      <td><span data-prefix>$</span><span contenteditable></span></td>
                     </tr>
                 </tbody>
             </table>
@@ -66,7 +66,7 @@
             <table class="balance">
                 <tr>
                     <th><span contenteditable>Total</span></th>
-                    <td><span data-prefix>$</span><span>0.00</span></td>
+                    <td><span data-prefix>$</span><span contenteditable>0.00</span></td>
                 </tr>
 
                 <tr>
@@ -80,5 +80,12 @@
                 </tr>
             </table>
         </article>
+        <div style="text-align: center;">
+          <button class="btn waves-effect waves-light print-button" style="background-color:#000" type="submit" id="btnMant" name="btnMant">Imprimir
+            <i class="material-icons right">print</i>
+          </button>
+        </div>
     </div>
 </div>
+
+<script src="./javascripts/Man-script.js" type="text/javascript"></script>
